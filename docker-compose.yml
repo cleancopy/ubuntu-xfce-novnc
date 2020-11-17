@@ -1,0 +1,20 @@
+version: '2'
+services:
+  portainer:
+    environment:
+      - VNC_PW=password
+      - VNC_COL_DEPTH=24
+      - PUID=1000
+      - PGID=1000
+      - TZ=Australia/Adelaide
+      - VNC_RESOLUTION=1600x900
+#    image: consol/ubuntu-xfce-vnc
+    image: gui:20.04
+    container_name: gui
+    volumes:
+      - /volumes/gui:/data
+    ports:
+      - 5901:5901
+      - 6901:6901
+    command: "tail -f /dev/null"
+    restart: unless-stopped
