@@ -2,7 +2,7 @@
 
 FROM ubuntu:18.04
 
-ENV REFRESHED_AT 2020-11-17
+ENV REFRESHED_AT 17-11-2020
 
 LABEL io.k8s.description="Headless VNC Container with Xfce window manager, firefox and chromium" \
       io.k8s.display-name="Headless VNC Container based on Ubuntu" \
