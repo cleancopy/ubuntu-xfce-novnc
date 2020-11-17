@@ -60,7 +60,13 @@ RUN $INST_SCRIPTS/libnss_wrapper.sh
 ADD ./src/common/scripts $STARTUPDIR
 RUN $INST_SCRIPTS/set_user_permission.sh $STARTUPDIR $HOME
 
-USER 0
+### change to rename the standard user (default user)
+RUN sudo adduser -u 1000 user
+RUN usermod -aG sudo user
+### change the default password for the standard user (default password)
+RUN sudo echo user:password | chpasswd
+
+USER 1000
 
 ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]
 CMD ["--wait"]
