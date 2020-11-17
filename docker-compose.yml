@@ -9,7 +9,7 @@ services:
       - TZ=Australia/Adelaide
       - VNC_RESOLUTION=1600x900
 #    image: consol/ubuntu-xfce-vnc
-    image: gui:20.04
+    image: gui:18.04
     container_name: gui
     volumes:
       - /volumes/gui:/data
