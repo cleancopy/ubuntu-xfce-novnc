@@ -8,8 +8,7 @@ services:
       - PGID=1000
       - TZ=Australia/Adelaide
       - VNC_RESOLUTION=1600x900
-#    image: consol/ubuntu-xfce-vnc
-    image: gui:18.04
+    image: cleancopy/ubuntu-xfce-novnc
     container_name: gui
     volumes:
       - /volumes/gui:/data
