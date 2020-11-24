@@ -28,3 +28,10 @@ will setup ubuntu 18.04 with xfce & noVNC and listen on 6901 for web connections
 
 1. `docker run -p 8080:6901 -e VNC_RESOLUTION=1920x1080 -e VNC_PW=newpassword cleancopy/ubuntu-xfce-novnc`
 2. `open a browser and go to http://127.0.0.1:8080 or use any VNC client to connect to port 5901`
+
+### Additional info
+
+Windows Docker desktop likes to keep the container running even after hitting ctrl-c to kill it - adding -t -i on the command line seems to prevent this behaviour
+e.g.
+
+`docker run -i -t -p 8080:6901 -e VNC_RESOLUTION=800x600 -e VNC_PW=password cleancopy/ubuntu-xfce-novnc`
