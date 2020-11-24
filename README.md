@@ -39,3 +39,7 @@ e.g.
 Adding --rm will ensure the container is removed once terminated e.g.
 
 `docker run --rm -i -t -p 80:6901 -e VNC_RESOLUTION=800x600 -e VNC_PW=password cleancopy/ubuntu-xfce-novnc`
+
+Should a newer container be built and uploaded the local copy can be updated with the command
+
+`docker pull cleancopy/ubuntu-xfce-novnc`
