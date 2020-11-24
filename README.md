@@ -23,3 +23,7 @@ will setup ubuntu 18.04 with xfce & noVNC and listen on 6901 for web connections
 
 1. `docker run -p 80:6901 cleancopy/ubuntu-xfce-novnc`
 2. `open a browser and go to http://127.0.0.1 or use any VNC client to connect to port 5901`
+
+## Changing some settings (password, resolution)
+
+1. docker run -p 80:6901 -e VNC_RESOLUTION=1920x1080 -e VNC_PW=newpassword cleancopy/ubuntu-xfce-novnc
