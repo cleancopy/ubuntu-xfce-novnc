@@ -35,3 +35,7 @@ Windows Docker desktop likes to keep the container running even after hitting ct
 e.g.
 
 `docker run -i -t -p 8080:6901 -e VNC_RESOLUTION=800x600 -e VNC_PW=password cleancopy/ubuntu-xfce-novnc`
+
+Adding --rm will ensure the container is removed once terminated e.g.
+
+`docker run --rm -i -t -p 80:6901 -e VNC_RESOLUTION=800x600 -e VNC_PW=password cleancopy/ubuntu-xfce-novnc`
